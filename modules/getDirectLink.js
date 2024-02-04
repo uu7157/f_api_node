@@ -8,6 +8,8 @@ getDirectLink = async (id) => {
   const matches = [...script.matchAll(regex)];
   const code = matches[0]?.[1] || null;
 
+  console.log('Script:', script);
+  console.log('Code:', code);
   if (!script || !code) {
     return { success: false };
   }
